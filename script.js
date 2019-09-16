@@ -15,10 +15,10 @@ const interval = setInterval(() => {
 }, 1000);
 
 function sortear(){
-    var audio = new Audio('audio.mp3');
+    /* var audio = new Audio('audio.mp3');
     audio.addEventListener('canplaythrough', function() {
     audio.play();
-    });
+    }); */
     var sorteio;
     var mega = new Array();
 
@@ -44,5 +44,6 @@ function sortear(){
     document.getElementById('num4').value = mega[3];
     document.getElementById('num5').value = mega[4];
     document.getElementById('num6').value = mega[5];
-    alert('Números sorteados. Boa sorte!'); 
+    alert('Números sorteados. Boa sorte!');
+    console.log(mega.sort(orderNumbers));
 }

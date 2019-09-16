@@ -1,20 +1,83 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="pt-br" >
+
+    <head>    
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width">
         <title>Sorteio Mega Sena JavaScript</title>
         <link rel="stylesheet" href="style.css"/>
+        <script src="http://code.jquery.com/jquery-1.12.1.js"></script>
+        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
     </head>
     <body>
-        
         <form class="box">
             <h1 id="data-hora"></h1>
             <h1>Sorteio de números (MEGASENA)</h1>
-            <input type="text" id="num1" disabled/>
-            <input type="text" id="num2" disabled>
-            <input type="text" id="num3" disabled/>
-            <input type="text" id="num4" disabled/>
-            <input type="text" id="num5" disabled/>
-            <input type="text" id="num6" disabled/>
+            <input  type="text" name="text" id="num1" />
+            <input  type="text" name="text" id="num2" />
+            <input  type="text" name="text" id="num3" />
+            <input  type="text" name="text" id="num4" />
+            <input  type="text" name="text" id="num5" />
+            <input  type="text" name="text" id="num6" />
             <input type="button" value="Sortear" id="btn_sort" onclick="sortear()" />
+            
+            <audio src="" hidden class=speech></audio>
+            <script>
+                
+               $("input[name=text]#num1").on('mouseover', function(e){
+                e.preventDefault();
+                /* var text = $("input[name=text]").val(); */
+                var text = $("input[name=text]#num1").val();
+                    responsiveVoice.speak("Número "+text,"Brazilian Portuguese Male");
+                    text=encodeURIComponent(text);
+                    var url="http://"
+              }) 
+
+              $("input[name=text]#num2").on('mouseover', function(e){
+                e.preventDefault();
+                /* var text = $("input[name=text]").val(); */
+                var text = $("input[name=text]#num2").val();
+                    responsiveVoice.speak("Número "+text,"Brazilian Portuguese Male");
+                    text=encodeURIComponent(text);
+                    var url="http://"
+              }) 
+
+              $("input[name=text]#num3").on('mouseover', function(e){
+                e.preventDefault();
+                /* var text = $("input[name=text]").val(); */
+                var text = $("input[name=text]#num3").val();
+                    responsiveVoice.speak("Número "+text,"Brazilian Portuguese Male");
+                    text=encodeURIComponent(text);
+                    var url="http://"
+              }) 
+
+              $("input[name=text]#num4").on('mouseover', function(e){
+                e.preventDefault();
+                /* var text = $("input[name=text]").val(); */
+                var text = $("input[name=text]#num4").val();
+                    responsiveVoice.speak("Número "+text,"Brazilian Portuguese Male");
+                    text=encodeURIComponent(text);
+                    var url="http://"
+              }) 
+
+              $("input[name=text]#num5").on('mouseover', function(e){
+                e.preventDefault();
+                /* var text = $("input[name=text]").val(); */
+                var text = $("input[name=text]#num5").val();
+                    responsiveVoice.speak("Número "+text,"Brazilian Portuguese Male");
+                    text=encodeURIComponent(text);
+                    var url="http://"
+              }) 
+
+              $("input[name=text]#num6").on('mouseover', function(e){
+                e.preventDefault();
+                /* var text = $("input[name=text]").val(); */
+                var text = $("input[name=text]#num6").val();
+                    responsiveVoice.speak("Número "+text,"Brazilian Portuguese Male");
+                    text=encodeURIComponent(text);
+                    var url="http://"
+              }) 
+            </script>
         </form>
         <script type="text/javascript" src="script.js" ></script>
     </body>

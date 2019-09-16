@@ -35,6 +35,15 @@ body{
     color: white;
     border-radius: 24px;
     transition: 0.25s;
+    -moz-text-blink: inherit;
+}
+
+.box input[type="text"]:hover{
+    overflow: visible;
+}
+
+.box input[type="text"]:hover{
+    background: #03B5AA;
 }
 
 .box input[type="button"]{
