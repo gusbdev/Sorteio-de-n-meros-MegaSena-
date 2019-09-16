@@ -1,3 +1,19 @@
+const zeroFill = n => {
+    return ('0' + n).slice(-2);
+}
+
+// Cria intervalo
+const interval = setInterval(() => {
+    // Pega o horário atual
+    const now = new Date();
+
+    // Formata a data conforme dd/mm/aaaa hh:ii:ss
+    const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+    // Exibe na tela usando a div#data-hora
+    document.getElementById('data-hora').innerHTML = dataHora;
+}, 1000);
+
 function sortear(){
     var audio = new Audio('audio.mp3');
     audio.addEventListener('canplaythrough', function() {
@@ -13,6 +29,7 @@ function sortear(){
         if( mega.indexOf(sorteio)< 0){
             mega.push(sorteio);
             i++;
+            
         }
 
         function orderNumbers(a,b){
@@ -27,9 +44,5 @@ function sortear(){
     document.getElementById('num4').value = mega[3];
     document.getElementById('num5').value = mega[4];
     document.getElementById('num6').value = mega[5];
+    alert('Números sorteados. Boa sorte!'); 
 }
-
-
-
-
-
