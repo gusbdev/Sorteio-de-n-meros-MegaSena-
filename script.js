@@ -45,5 +45,10 @@ function sortear(){
     document.getElementById('num5').value = mega[4];
     document.getElementById('num6').value = mega[5];
     alert('Números sorteados. Boa sorte!');
-    console.log(mega.sort(orderNumbers));
+    document.getElementById('num1').disabled = false;
+    document.getElementById('num2').disabled = false;
+    document.getElementById('num3').disabled = false;
+    document.getElementById('num4').disabled = false;
+    document.getElementById('num5').disabled = false;
+    document.getElementById('num6').disabled = false;
 }
